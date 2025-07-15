@@ -67,7 +67,7 @@ async def get_transfer_channal():
 
 
 async def send_message_win_users(usdt, result_win_amount, message_id, url, status=None):
-    photo = FSInputFile('photos/Wins.png')
+    photo = InputFile('photos/Wins.png')
     if status != 'CHECK':
         return await bot.send_photo(chat_id=channal_id, photo=photo,
                                     caption=f'<b><blockquote>🟢 Победа! \n\n'
@@ -95,7 +95,7 @@ async def fake_send_message_win_users(amount, KEF, rubs_price, message_id):
     fake_transfer = "".join(random.choice(digits) for _ in range(0, 6))
     date = datetime.datetime.now(pytz.timezone('Europe/Moscow')).strftime('%Y-%m-%d %H:%M:%S')
 
-    photo = FSInputFile('photos/Wins.png')
+    photo = InputFile('photos/Wins.png')
     await bot.send_photo(chat_id=channal_id, photo=photo,
                          caption=f'<b><blockquote>🔵 Победа! \n\n'
                                  f'💸 Выигрыш: {round(float(usdt), 2)}$ ({result_win_amount}₽)\n'
@@ -113,7 +113,7 @@ async def fake_send_message_win_users(amount, KEF, rubs_price, message_id):
 async def send_message_lose_users(message_id):
 
     await asyncio.sleep(5)
-    photo = FSInputFile('photos/Lose.jpg')
+    photo = InputFile('photos/Lose.jpg')
     await bot.send_photo(chat_id=channal_id, photo=photo,
                          caption=f'<b>🥵 Поражение!\n\n'
                                  f'<blockquote>Попытай свою удачу снова!\n'
@@ -124,7 +124,7 @@ async def fake_send_message_lose_users(message_id, name, stavka):
     cashback_amount = float(stavka) / 100 * CASHBACK_PROCENT
 
     await asyncio.sleep(5)
-    photo = FSInputFile('photos/Lose.jpg')
+    photo = InputFile('photos/Lose.jpg')
     await bot.send_photo(chat_id=channal_id, photo=photo,
                          caption=f'<b>🥵 Поражение!\n\n'
                                  f'<blockquote>Попытай свою удачу снова!\n'
