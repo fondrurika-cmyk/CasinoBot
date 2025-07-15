@@ -745,7 +745,7 @@ async def start_game_post_func(message: Message):
                 number_random = random.randint(0, 14)
                 if number_random == 0 and exodus == 'Зеленое':
                     number_random = random.randint(0, 14)
-                await bot.send_animation(chat_id=channal_id, animation=FSInputFile(f'video/{number_random}.mp4'))
+                await bot.send_animation(chat_id=channal_id, animation=InputFile(f'video/{number_random}.mp4'))
 
                 if exodus == 'Красное' and str(number_random) in RED:
                     return await transfer_wins(KEF=KEF.get('KEF16'), username=username, amount=amount, user_id=user_id,
