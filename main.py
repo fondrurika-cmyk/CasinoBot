@@ -1,7 +1,7 @@
 import datetime
 
 from aiogram.dispatcher import FSMContext
-from aiogram.types import Message, CallbackQuery, FSInputFile
+from aiogram.types import Message, CallbackQuery, InputFile
 from aiogram import F
 from aiogram.filters import CommandStart, CommandObject
 from aiogram.utils.markdown import hlink
