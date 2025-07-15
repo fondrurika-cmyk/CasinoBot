@@ -2,7 +2,7 @@ import datetime
 import random
 
 from aiogram.filters import BaseFilter
-from aiogram.types import BotCommand, BotCommandScopeDefault, Message, FSInputFile
+from aiogram.types import BotCommand, BotCommandScopeDefault, Message, InputFile
 from aiogram.utils.markdown import hlink
 
 from loader import bot, crypto, db, scheduler
