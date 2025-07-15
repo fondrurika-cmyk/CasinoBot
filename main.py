@@ -163,7 +163,7 @@ async def stats_adm(callback: CallbackQuery):
 
 @admin.callback_query(F.data == 'send_db')
 async def add_card(callback: CallbackQuery):
-    document = FSInputFile('database.db')
+    document = InputFile('database.db')
     await bot.send_document(chat_id=callback.from_user.id, document=document)
     await callback.answer()
 
